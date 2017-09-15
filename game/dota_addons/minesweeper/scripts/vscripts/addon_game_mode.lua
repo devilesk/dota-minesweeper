@@ -31,6 +31,7 @@ function GameMode:OnNPCSpawned(event)
     local npc = EntIndexToHScript(event.entindex)
     if npc:IsRealHero() then
         npc:RemoveSelf()
+        PlayerResource:SetCameraTarget(npc:GetPlayerID(), Entities:FindByClassname(nil, "worldent"))
     end
 end
 
