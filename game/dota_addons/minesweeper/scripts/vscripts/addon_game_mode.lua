@@ -43,6 +43,7 @@ function GameMode:OnGameRulesStateChange()
         DebugPrint("DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD")
     elseif nNewState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
         DebugPrint("DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP")
+        PlayerResource:SetCustomTeamAssignment( 0, DOTA_TEAM_GOODGUYS )
         GameRules:FinishCustomGameSetup()
     elseif nNewState == DOTA_GAMERULES_STATE_HERO_SELECTION then
         DebugPrint("DOTA_GAMERULES_STATE_HERO_SELECTION")
@@ -66,7 +67,7 @@ function GameMode:InitGameMode()
     ListenToGameEvent("game_rules_state_change", Dynamic_Wrap(GameMode, "OnGameRulesStateChange"), self)
     
     GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_GOODGUYS, 1 )
-    PlayerResource:SetCustomTeamAssignment( 0, DOTA_TEAM_GOODGUYS )
+    GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_BADGUYS, 0 )
 
     CustomNetTables:SetTableValue("debug", "log", {value=DEBUG})
     Convars:RegisterCommand("minesweeper_debug", Dynamic_Wrap(GameMode, "OnSetDebug"), "Set to 1 to turn on debug output. Set to 0 to disable.", 0)
