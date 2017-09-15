@@ -1,0 +1,196 @@
+@define CELL_SIZE: 36px;
+@define BORDER: 2px solid #757575;
+
+
+.container {
+    width: 1920px;
+    height: 1080px;
+    flow-children: down;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #588c46), to( #1f3b08));
+}
+.controls-container {
+    flow-children: right-wrap;
+    margin-left: 8px;
+}
+.inner-container {
+    width: 100%;
+    height: 1036px;
+    flow-children: right;
+}
+.center-container {
+    flow-children: down;
+    vertical-align: middle;
+    horizontal-align: middle;
+    background-color: #ababab;
+    padding: 10px;
+    border: BORDER;
+    border-top-color: white;
+    border-left-color: white;
+}
+.optionsbar-container {
+    flow-children: right;
+    margin-bottom: 10px;
+    border: BORDER;
+    border-bottom-color: white;
+    border-right-color: white;
+    horizontal-align: middle;
+}
+.optionsbar-container .btn {
+    border: BORDER;
+    background-color: #ababab;
+    height: CELL_SIZE;
+    width: 140px;
+}
+.optionsbar-container .btn Label {
+    color: black;
+    vertical-align: middle;
+    padding: 0 10px;
+    width: 100%;
+    text-align: center;
+}
+.optionsbar-container.difficulty_beginner #btn-difficulty-beginner,
+.optionsbar-container.difficulty_intermediate #btn-difficulty-intermediate,
+.optionsbar-container.difficulty_expert #btn-difficulty-expert {
+    border: BORDER;
+    background-color: #ababab;
+    border-width: 5px;
+    border-top-color: white;
+    border-left-color: white;
+}
+.topbar-container {
+    width: 100%;
+    height: 50px;
+    border: BORDER;
+    border-bottom-color: white;
+    border-right-color: white;
+    margin-bottom: 10px;
+    flow-children: right;
+}
+.topbar-container > Panel {
+    width: fill-parent-flow(1);
+    vertical-align: middle;
+}
+.topbar-container > Panel > Label {
+    color: red;
+    font-family: Arial;
+    font-size: 30px;
+}
+#mine-count {
+    padding-left: 10px;
+}
+#time {
+    horizontal-align: right;
+    padding-right: 10px;
+}
+.board-container {
+    flow-children: down;
+    border: BORDER;
+    border-right-color: white;
+    horizontal-align: middle;
+}
+.row {
+    flow-children: right;
+}
+.cell {
+    width: CELL_SIZE;
+    height: CELL_SIZE;
+    border: BORDER;
+    background-color: #ababab;
+}
+.up {
+    border-width: 5px;
+    border-top-color: white;
+    border-left-color: white;
+}
+.mine, .flag, .n1, .n2, .n3, .n4, .n5, .n6, .n7, .n8, .q, #btn-new Panel, #btn-new.dead Panel {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+}
+.mine {
+    background-image: url("file://{images}/mine.png");
+}
+.flag, .gameover .flag.mine, .victory .mine {
+    background-image: url("file://{images}/flag.png");
+}
+.gameover .flag {
+    background-image: url("file://{images}/bad_flag.png");
+}
+.q {
+    background-image: url("file://{images}/q.png");
+}
+.n1 {
+    background-image: url("file://{images}/1.png");
+}
+.n2 {
+    background-image: url("file://{images}/2.png");
+}
+.n3 {
+    background-image: url("file://{images}/3.png");
+}
+.n4 {
+    background-image: url("file://{images}/4.png");
+}
+.n5 {
+    background-image: url("file://{images}/5.png");
+}
+.n6 {
+    background-image: url("file://{images}/6.png");
+}
+.n7 {
+    background-image: url("file://{images}/7.png");
+}
+.n8 {
+    background-image: url("file://{images}/8.png");
+}
+#btn-new Panel {
+    background-image: url("file://{images}/alive.png");
+}
+#btn-new.dead Panel {
+    background-image: url("file://{images}/dead.png");
+}
+#btn-new.victory Panel {
+    background-image: url("file://{images}/victory.png");
+}
+
+#btn-new {
+    height: 50px;
+    width: 50px;
+    horizontal-align: middle;
+    border-width: 2px;
+    margin: 1px;
+}
+.btn:active {
+    border-top-color: #757575;
+    border-left-color: #757575;
+    
+    border-bottom-color: white;
+    border-right-color: white;
+}
+.btn Panel {
+    width: 100%;
+    height: 100%;
+}
+#DashboardButton:hover {
+    opacity: 1;
+}
+#DashboardButton {
+    background-image: url("s2r://panorama/images/control_icons/return_to_game_png.vtex");
+    transform: scaleY(-1);
+    tooltip-position: bottom;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 8px;
+    margin-right: 8px;
+    vertical-align: middle;
+    horizontal-align: middle;
+    background-position: center;
+    opacity: 0.5;
+    wash-color: #CDF;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}

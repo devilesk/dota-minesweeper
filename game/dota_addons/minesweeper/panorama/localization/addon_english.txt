@@ -1,0 +1,7 @@
+"addon"
+{
+	"LoadingScreenDescriptionText"                  "Minesweeper"
+    "difficulty_beginner"                           "Beginner"
+    "difficulty_intermediate"                       "Intermediate"
+    "difficulty_expert"                             "Expert"
+}

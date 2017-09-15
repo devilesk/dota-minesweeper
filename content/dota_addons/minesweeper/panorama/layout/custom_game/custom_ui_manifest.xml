@@ -1,0 +1,9 @@
+<root>
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/util.js" />
+    </scripts>
+    <Panel>
+        <CustomUIElement type="LoadingScreen" layoutfile="file://{resources}/layout/custom_game/custom_loading_screen.xml" />
+        <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/main.xml" />
+    </Panel>
+</root>

@@ -1,0 +1,46 @@
+<root>
+    <styles>
+        <include src="file://{resources}/styles/dotastyles.css" />
+        <include src="file://{resources}/styles/custom_game/main.css" />
+    </styles>
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/main.js" />
+    </scripts>
+    <snippets>
+    </snippets>
+    <Panel class="container" hittest="false">
+        <Panel class="controls-container" hittest="false">
+            <Button id="DashboardButton" hittest="false">
+            </Button>
+        </Panel>
+        <Panel class="inner-container" hittest="false">
+            <Panel class="center-container" hittest="false">
+                <Panel id="optionsbar" class="optionsbar-container">
+                    <Button id="btn-difficulty-beginner" class="btn" onactivate="OnSetDifficulty(0)">
+                        <Label text="#difficulty_beginner" />
+                    </Button>
+                    <Button id="btn-difficulty-intermediate" class="btn" onactivate="OnSetDifficulty(1)">
+                        <Label text="#difficulty_intermediate" />
+                    </Button>
+                    <Button id="btn-difficulty-expert" class="btn" onactivate="OnSetDifficulty(2)">
+                        <Label text="#difficulty_expert" />
+                    </Button>
+                </Panel>
+                <Panel id="topbar" class="topbar-container">
+                    <Panel>
+                        <Label id="mine-count" text="00" />
+                    </Panel>
+                    <Panel>
+                        <Button id="btn-new" class="btn cell up" onactivate="OnNewGame()">
+                            <Panel />
+                        </Button>
+                    </Panel>
+                    <Panel>
+                        <Label id="time" text="00:00" />
+                    </Panel>
+                </Panel>
+                <Panel id="board" class="board-container" />
+            </Panel>
+        </Panel>
+    </Panel>
+</root>
