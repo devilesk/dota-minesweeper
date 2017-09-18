@@ -15,12 +15,12 @@ node_modules/
 *.vcss_c
 
 # Commit panorama compiled textures
-!game/dota_addons/chess/panorama/images/**/*.vtex_c
+!game/dota_addons/minesweeper/panorama/images/**/*.vtex_c
 
 # Map overviews
-content/dota_addons/chess/materials/overviews/*.vmat
-content/dota_addons/chess/materials/overviews/*.txt
-game/dota_addons/chess/resource/overviews/*
+content/dota_addons/minesweeper/materials/overviews/*.vmat
+content/dota_addons/minesweeper/materials/overviews/*.txt
+game/dota_addons/minesweeper/resource/overviews/*
 
 #Github dump
 *.stackdump
